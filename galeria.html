@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería Ambiental - Sofía Ojeda</title>
+  <link rel="icon" type="image/x-icon" href="IMAGENES/corazon.png" />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Portafolio.html">Inicio</a></li>
+        <li><a href="botonera.html">Botonera</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Galería Ambiental - Lugares Maravillosos</h1>
+    <p class="intro">Imágenes creadas por IA que muestran paisajes increíbles y llenos de magia natural.</p>
+
+    <section aria-label="Galería de paisajes generados por IA">
+      <div class="gallery-grid">
+
+        <figure>
+          <img src="IMAGENES/bosquemistico.png" alt="Bosque místico" />
+          <figcaption>Bosque místico con luz filtrada y niebla suave que invita a la calma.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="IMAGENES/lagocristalino.png" alt="Lago cristalino" />
+          <figcaption>Lago cristalino rodeado de montañas majestuosas bajo el cielo azul.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="IMAGENES/ciudadverde.png" alt="Ciudad verde" />
+          <figcaption>Ciudad futurista con arquitectura integrada a la naturaleza y abundante vegetación.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="IMAGENES/praderailuminada.png" alt="Pradera iluminada" />
+          <figcaption>Pradera iluminada por la aurora boreal, con un río serpenteante en calma.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="IMAGENES/montañasmágicas.png" alt="Montañas mágicas" />
+          <figcaption>Montañas cubiertas de nieve con luces etéreas que iluminan el cielo nocturno.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="IMAGENES/cascadaencantada.png" alt="Cascada encantada" />
+          <figcaption>Cascada cristalina que cae en un valle rodeado de flores y árboles exuberantes.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxOverlay">
+    <div id="lightboxContent">
+      <img src="" alt="Imagen ampliada" />
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Sofía Ojeda</p>
+  </footer>
+
+  <script>
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxImage = lightboxOverlay.querySelector('img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightboxOverlay.classList.add('active');
+      });
+    });
+
+    lightboxOverlay.addEventListener('click', e => {
+      if (e.target === lightboxOverlay || e.target === lightboxImage) {
+        lightboxOverlay.classList.remove('active');
+        lightboxImage.src = '';
+        lightboxImage.alt = '';
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === "Escape" && lightboxOverlay.classList.contains('active')) {
+        lightboxOverlay.classList.remove('active');
+        lightboxImage.src = '';
+        lightboxImage.alt = '';
+      }
+    });
+  </script>
+  
+
+</body>
+</html>
+
+
+

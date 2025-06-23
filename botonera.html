@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Botonera</title>
+  <link rel="icon" type="image/x-icon" href="IMAGENES/corazon.png">
+  <link rel="stylesheet" href="estilo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="Portafolio.html">Inicio</a></li>
+      <li><a href="botonera.html">Botonera</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Botonera de sonidos</h1>
+  <p class="intro">Hacé clic en un botón para escuchar un sonido. Ideal para practicar efectos de interacción 🧸✨</p>
+
+  <div class="botonera">
+    <button data-sound="sonido1">Sonido 1</button>
+    <button data-sound="sonido2">Sonido 2</button>
+    <button data-sound="sonido3">Sonido 3</button>
+    <button data-sound="sonido4">Sonido 4</button>
+    <button data-sound="sonido5">Sonido 5</button>
+    <button data-sound="sonido6">Sonido 6</button>
+  </div>
+
+  <audio id="sonido1" src="sonido1.mp3"></audio>
+  <audio id="sonido2" src="sonido2.mp3"></audio>
+  <audio id="sonido3" src="sonido3.mp3"></audio>
+  <audio id="sonido4" src="sonido4.mp3"></audio>
+  <audio id="sonido5" src="sonido5.mp3"></audio>
+  <audio id="sonido6" src="sonido6.mp3"></audio>
+</main>
+
+<script>
+  const botones = document.querySelectorAll('.botonera button');
+  const sonidos = document.querySelectorAll('audio');
+
+  botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+      sonidos.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      const id = boton.getAttribute('data-sound');
+      const sonido = document.getElementById(id);
+      if (sonido) sonido.play();
+    });
+  });
+</script>
+
+<footer>
+  <p>© 2025 Sofía Ojeda</p>
+</footer>
+
+</body>
+</html>

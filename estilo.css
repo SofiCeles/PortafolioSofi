@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe1ec 0%, #fbeffb 100%);
+  font-size: 16px;
+  color: #4b3b2a;
+  font-weight: 300;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  filter: blur(22px) brightness(1.08);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #fff6fa;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b48e92;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+nav a:hover {
+  color: #c28791;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(120deg, #fff6fa 60%, #ffe1ec 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 18px rgba(180, 142, 146, 0.10);
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #b48e92;
+  margin-bottom: 1rem;
+}
+
+h2, h3 {
+  color: #b48e92;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5d4037;
+}
+
+.botonera {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.botonera button {
+  background-color: #d29ea4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(210, 158, 164, 0.2);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.botonera button:hover {
+  background-color: #c28791;
+  transform: scale(1.05);
+}
+
+.botonera button:active {
+  transform: scale(0.95);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(180, 142, 146, 0.15);
+  overflow: hidden;
+  transition: 0.3s ease;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #b48e92;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  padding: 0 1rem;
+  color: #6d4c41;
+}
+
+button, .btn-view {
+  background-color: #d29ea4;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view:hover, button:hover {
+  background-color: #c28791;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #6d4c41;
+}
+
+.calculadora-container {
+  max-width: 360px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #fff6fa, #ffe1ec);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(180, 142, 146, 0.15);
+  text-align: center;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  color: #5d4037;
+}
+
+.calculadora-container::before,
+.calculadora-container::after {
+  content: \"♡\";
+  font-family: 'Dancing Script', cursive;
+  color: #f8cdd9;
+  opacity: 0.2;
+  position: absolute;
+  font-size: 3rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.calculadora-container::before {
+  top: -1.5rem;
+  left: -1rem;
+  font-size: 4rem;
+}
+
+.calculadora-container::after {
+  bottom: -1rem;
+  right: -1rem;
+}
+
+.calculadora-container h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  color: #b48e92;
+  margin-bottom: 1rem;
+}
+
+#display {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: right;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  background: white;
+  color: #5d4037;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+
+.botones button {
+  background-color: #d29ea4;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(210, 158, 164, 0.3);
+  transition: all 0.25s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.botones button:hover {
+  background-color: #c28791;
+  transform: scale(1.05);
+}
+
+.botones button:active {
+  transform: scale(0.95);
+}
+
+.botones button.clear {
+  grid-column: span 4;
+  background-color: #fbe3ea;
+  color: #b48e92;
+}
+
+.botones button.clear:hover {
+  background-color: #f3d4de;
+}
+
+.about-me {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.foto-container {
+  width: 180px;
+  height: 180px;
+  margin: 0.5rem auto 2rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(180, 142, 146, 0.3);
+  border: 4px solid #d29ea4;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.foto-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.foto-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(180, 142, 146, 0.5);
+}
+
+.educacion-conocimientos {
+  margin-top: 3rem;
+  background: #fff6fa;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(180, 142, 146, 0.15);
+}
+
+.educacion-conocimientos h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #b48e92;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.educacion-conocimientos h3 {
+  color: #b48e92;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #d29ea4;
+  padding-bottom: 0.3rem;
+}
+
+.educacion-conocimientos ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #5d4037;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.educacion-conocimientos li {
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #5d4037;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .botonera {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .botonera button {
+    max-width: 100%;
+  }
+
+  .intro {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 1rem auto 1.5rem auto;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .foto-container {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .calculadora-container {
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.gallery-grid figure {
+  margin: 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.gallery-grid figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #5d4037;
+}
+
+#lightboxOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#lightboxOverlay.active {
+  display: flex;
+}
+
+
+#lightboxContent {
+  max-width: 80vw;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#lightboxContent img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  cursor: zoom-out;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
