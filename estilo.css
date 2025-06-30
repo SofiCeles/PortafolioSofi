@@ -522,6 +522,10 @@ footer {
   background-color: #c28791;
   transform: scale(1.05);
 }
+#lightboxContent img {
+  transition: opacity 0.3s ease;
+}
+
 
 
 
