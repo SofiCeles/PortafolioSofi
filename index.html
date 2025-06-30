@@ -82,10 +82,25 @@
 </section>
 
 
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p>Podés escribirme a <a href="mailto:sojeda@uade.edu.ar">sojeda@uade.edu.ar</a>.</p>
-  </section>
+<section id="contact">
+  <h2>Contacto</h2>
+  <form action="mailto:sojeda@uade.edu.ar" method="post" enctype="text/plain">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+ <a href="https://soficeles.github.io/LinktreeSofi/" target="_blank" class="btn-linkedin">
+  <img src="IMAGENES/Linkedin.jpg" alt="LinkedIn" style="height: 16px; vertical-align: middle; margin-right: 8px;" />LinkedIn
+</a>
+</section>
+
 </main>
 
 <footer>
